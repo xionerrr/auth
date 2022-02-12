@@ -1,13 +1,13 @@
-import { useDispatch } from 'react-redux'
 import { Navigate } from "react-router-dom";
 
 import { StyledHome } from './styled'
 import { ROUTES } from 'routes/routes'
 import { useAuth } from 'hooks/useAuth'
 import { rejectUser } from 'store/reducer/userSlice';
+import { useAppDispatch } from 'store/store';
 
 export const Home = () => {
-    const dispatch = useDispatch()
+    const dispatch = useAppDispatch()
 
     const {isAuth, email} = useAuth()
 
