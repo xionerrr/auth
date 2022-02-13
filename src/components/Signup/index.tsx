@@ -1,10 +1,10 @@
 import { useNavigate } from 'react-router-dom'
-import { useAppDispatch } from 'store/store'
 
 import { Form } from 'components/Form'
 import { ROUTES } from 'routes/routes'
 import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth'
 import { setUser } from 'store/reducer/userSlice'
+import { useAppDispatch } from 'hooks/useAppDispatch'
 
 export const SignUpForm = () => {
     const dispatch = useAppDispatch()

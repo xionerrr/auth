@@ -4,7 +4,7 @@ import { Form } from 'components/Form'
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth'
 import { setUser } from 'store/reducer/userSlice'
 import { ROUTES } from 'routes/routes'
-import { useAppDispatch } from 'store/store'
+import { useAppDispatch } from 'hooks/useAppDispatch'
 
 export const LoginForm = () => {
     const dispatch = useAppDispatch()

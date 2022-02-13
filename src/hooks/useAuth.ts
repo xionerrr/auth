@@ -1,4 +1,4 @@
-import { useStoreSelector } from 'store/store';
+import { useStoreSelector } from "./useAppSelector"
 
 
 export const useAuth = () => {

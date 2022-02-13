@@ -4,7 +4,7 @@ import { StyledHome } from './styled'
 import { ROUTES } from 'routes/routes'
 import { useAuth } from 'hooks/useAuth'
 import { rejectUser } from 'store/reducer/userSlice';
-import { useAppDispatch } from 'store/store';
+import { useAppDispatch } from "hooks/useAppDispatch";
 
 export const Home = () => {
     const dispatch = useAppDispatch()
