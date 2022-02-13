@@ -22,6 +22,9 @@ export const SignUpForm = () => {
                 }))
                 navigate(ROUTES.HOME)
             })
+            .catch(() => {
+                console.error("error")
+            })
     }
 
     return (

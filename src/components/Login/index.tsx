@@ -22,6 +22,9 @@ export const LoginForm = () => {
                 }))
                 navigate(ROUTES.HOME)
             })
+            .catch(() => {
+                console.error("error")
+            })
     }
 
     return (

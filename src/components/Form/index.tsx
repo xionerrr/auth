@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import { StyledFirstInput, StyledForm, StyledInputs, StyledSecondInput } from './styled'
+import { StyledForm, StyledInput, StyledInputBlock, StyledInputs, StyledLabel, StyledSubmitButton } from './styled'
 
 interface FormProps {
     title: string,
@@ -21,35 +21,36 @@ export const Form = ({title, handleClick}:FormProps) => {
 
     return (
         <StyledForm autoComplete="new-password">
-            <StyledInputs>
-                <StyledFirstInput>
-                    <span>E-mail</span>
-                    <input 
+             <StyledInputs>
+                <StyledInputBlock>
+                    <StyledLabel>E-mail</StyledLabel>
+                    <StyledInput 
                         type="email"
                         value={email}
                         onChange={emailChanger}
-                        placeholder="E-mail"
+                        placeholder="[a-z0-9]"
                         autoComplete="off"
                         required
                     />
-                </StyledFirstInput>
-                <StyledSecondInput>
-                    <span>Password</span>
-                    <input 
+                </StyledInputBlock>
+                <StyledInputBlock>
+                    <StyledLabel>Password</StyledLabel>
+                    <StyledInput 
                         type="password"
                         value={pass}
                         onChange={passChanger}
-                        placeholder="Password"
+                        placeholder="^.*[a-zA-Z]+.*$"
                         autoComplete="new-password"
                         required
                     />
-                </StyledSecondInput>
+                </StyledInputBlock>
             </StyledInputs>
-            <button
+            <StyledSubmitButton
                 onClick={(e) => handleClick(email, pass)}
+                type="submit"
             >
                 {title}
-            </button>
+            </StyledSubmitButton>
         </StyledForm>
     )
 }
